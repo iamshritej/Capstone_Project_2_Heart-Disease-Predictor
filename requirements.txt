@@ -1,8 +1,5 @@
-pandas
-numpy
-scikit-learn
-fastapi
-uvicorn
+flask
 streamlit
+scikit-learn
+pandas
 requests
-python-multipart
