@@ -4,7 +4,10 @@ from flask import Flask, request, jsonify
 
 app = Flask(__name__)
 
-model = pickle.load(open('../model/model.pkl', 'rb'))
+import os
+
+model_path = os.path.join(os.path.dirname(__file__), '..', 'model', 'model.pkl')
+model = pickle.load(open(model_path, 'rb'))
 
 @app.route('/predict', methods=['POST'])
 def predict():
